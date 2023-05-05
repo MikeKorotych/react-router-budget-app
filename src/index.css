@@ -79,6 +79,7 @@ h5,
 h6 {
   font-weight: bold;
   line-height: var(--lh-1);
+  margin: 0 auto;
 }
 
 h1,
@@ -173,6 +174,7 @@ p {
 
 :where(.btn--dark) {
   --backdrop: hsl(var(--text));
+  /* margin: 0 auto; */
 }
 
 :where(.btn--outline) {
@@ -437,6 +439,7 @@ select {
   position: absolute;
   inset: 0.55rem;
   border: 2px dashed hsl(var(--text));
+  border: 3px solid hsl(var(--text));
   border-radius: calc(var(--round-lg) * 0.6);
   z-index: -1;
 }
@@ -462,6 +465,7 @@ select {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-md);
 }
 
@@ -472,7 +476,7 @@ select {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 32.2%;
   flex: 1 1 32.2%;
-  max-width: 600px;
+  max-width: 720px;
   -webkit-box-shadow: 0.25em 0.3em 1em hsl(var(--muted) / 0.2);
   box-shadow: 0.25em 0.3em 1em hsl(var(--muted) / 0.2);
   background-color: var(--bkg);
@@ -601,4 +605,18 @@ table a {
 /* toast */
 .Toastify__toast-body {
   font-size: var(--fs-300);
+}
+
+/* test */
+
+nav {
+  padding-bottom: 0;
+}
+
+main {
+  padding-top: 0;
+}
+
+.table + .btn--dark {
+  margin: 0 auto;
 }
