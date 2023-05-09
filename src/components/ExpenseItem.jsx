@@ -11,7 +11,7 @@ import {
 // lib import
 import { TrashIcon } from '@heroicons/react/24/solid'
 
-function ExpenseItem({ expense }) {
+function ExpenseItem({ expense, showBudget }) {
   const fetcher = useFetcher()
 
   const budget = getAllMatchingItems({
@@ -20,18 +20,21 @@ function ExpenseItem({ expense }) {
     value: expense.budgetId,
   })[0]
 
-  console.log(budget)
-
   return (
     <>
       <td>{expense.name}</td>
       <td>{formatCurrency(expense.amount)}</td>
       <td>{formatDateToLocaleString(expense.createdAt)}</td>
-      <td>
-        <Link to={`/budget/${budget.id}`} style={{ '--accent': budget.color }}>
-          {budget.name}
-        </Link>
-      </td>
+      {showBudget && (
+        <td>
+          <Link
+            to={`/budget/${budget.id}`}
+            style={{ '--accent': budget.color }}
+          >
+            {budget.name}
+          </Link>
+        </td>
+      )}
       <td>
         <fetcher.Form method="post">
           <input type="hidden" name="_action" value="deleteExpense" />

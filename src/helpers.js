@@ -15,7 +15,6 @@ export const fetchData = (key) => {
 // Get all items from locak storage
 export const getAllMatchingItems = ({ category, key, value }) => {
   const data = fetchData(category) ?? []
-  console.log(data)
   return data.filter((item) => item[key] === value)
 }
 
