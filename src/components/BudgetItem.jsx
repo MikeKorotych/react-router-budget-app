@@ -33,7 +33,7 @@ function BudgetItem({ budget, showDelete = false }) {
       </progress>
       <div className="progress-text">
         <small>{formatCurrency(spent)} spent</small>
-        <small>{formatCurrency(amount - spent)} remeinig</small>
+        <small>{formatCurrency(amount - spent)} remaining</small>
       </div>
       {showDelete ? (
         <div className="flex-sm">
