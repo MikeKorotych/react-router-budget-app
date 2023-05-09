@@ -165,6 +165,8 @@ p {
   max-width: -moz-fit-content;
   max-width: fit-content;
   cursor: pointer;
+
+  border-radius: 18px;
 }
 
 :where(.btn):is(:hover, :focus-visible) {
@@ -348,7 +350,8 @@ select {
   font-size: var(--fs-300);
   background-color: hsl(var(--bkg));
   border: 2px solid hsl(var(--muted));
-  border-radius: var(--round-sm);
+  /* border-radius: var(--round-sm); */
+  border-radius: 18px;
   padding: var(--space-xs) var(--space-sm);
   height: 100%;
   -webkit-transition: -webkit-box-shadow 300ms
@@ -427,7 +430,10 @@ select {
   gap: var(--space-sm);
   background-color: var(--bkg);
   padding: var(--space-xl);
-  border-radius: var(--round-lg);
+  /* border-radius: var(--round-lg); */
+
+  border-radius: 41px;
+
   -webkit-box-shadow: 0.25em 0.3em 1em hsl(var(--muted) / 0.2);
   box-shadow: 0.25em 0.3em 1em hsl(var(--muted) / 0.2);
   border-top: 0.15em solid white;
@@ -442,7 +448,10 @@ select {
   inset: 0.55rem;
   border: 2px dashed hsl(var(--text));
   border: 3px solid hsl(var(--text));
-  border-radius: calc(var(--round-lg) * 0.6);
+  /* border-radius: calc(var(--round-lg) * 0.6); */
+
+  border-radius: calc(36px * 0.6);
+  border-radius: 25px;
   z-index: -1;
 }
 
@@ -635,6 +644,6 @@ main {
   margin: 0 auto;
 }
 
-/* .flex-sm > .btn {
-  border: none;
-} */
+.grid-sm > p {
+  text-align: center;
+}
